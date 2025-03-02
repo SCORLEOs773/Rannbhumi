@@ -1,0 +1,7 @@
+<div class="gacha-container">
+  <button (click)="pullCharacter()">Pull a Character</button>
+
+  <div *ngIf="pulledCharacter">
+    <app-character-card [character]="pulledCharacter"></app-character-card>
+  </div>
+</div>

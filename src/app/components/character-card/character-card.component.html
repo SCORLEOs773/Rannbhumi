@@ -1,0 +1,26 @@
+<div class="card-container" [ngClass]="getRarityClass(character.rarity)">
+  <div class="card-header">
+    <h2>{{ character.name }}</h2>
+    <span class="rarity">{{ character.rarity }}</span>
+  </div>
+
+  <div class="card-image-container">
+    <img
+      [src]="character.image"
+      alt="{{ character.name }}"
+      class="card-image"
+    />
+  </div>
+
+  <div class="card-info">
+    <p class="faction">{{ character.faction }}</p>
+    <div class="stats">
+      <span>⚔️ {{ character.attack }}</span>
+      <span>🛡️ {{ character.defense }}</span>
+      <span>❤️ {{ character.health }}</span>
+    </div>
+    <div class="ability">
+      <strong>🎇 {{ character.special_ability }}</strong>
+    </div>
+  </div>
+</div>
