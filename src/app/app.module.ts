@@ -16,6 +16,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { CardsComponent } from './components/cards/cards.component';
+import { WeaponCardComponent } from './components/weapon-card/weapon-card.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { CardsComponent } from './components/cards/cards.component';
     SignupComponent,
     HowToPlayComponent,
     CardsComponent,
+    WeaponCardComponent,
   ],
   imports: [
     BrowserModule,

@@ -7,8 +7,11 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./cards.component.css'],
 })
 export class CardsComponent implements OnInit {
+  activeTab: string = 'characters';
   characters: any[] = [];
   filteredCharacters: any[] = [];
+  weapons: any[] = [];
+  filteredWeapons: any[] = [];
   sortCriteria: string = 'rarity-asc';
   selectedFaction: string = '';
   selectedSubtype: string = '';
@@ -16,7 +19,7 @@ export class CardsComponent implements OnInit {
   factions: string[] = [];
   subtypes: string[] = [];
 
-  rarityOrder = ['Common', 'Rare', 'Epic', 'Mythic', 'Legendary'];
+  rarityOrder = ['Common', 'Rare', 'Epic', 'Legendary', 'Mythic'];
 
   constructor(private http: HttpClient) {}
 
@@ -24,12 +27,15 @@ export class CardsComponent implements OnInit {
     this.http.get<any[]>('assets/CharacterCards.json').subscribe((data) => {
       this.characters = data;
       this.filteredCharacters = [...this.characters];
-
-      // Extract unique factions and subtypes
       this.factions = [...new Set(this.characters.map((char) => char.faction))];
       this.subtypes = [...new Set(this.characters.map((char) => char.subtype))];
+      this.sortCards();
+    });
 
-      this.sortCards(); // Sort initially
+    this.http.get<any[]>('assets/WeaponCards.json').subscribe((data) => {
+      this.weapons = data;
+      this.filteredWeapons = [...this.weapons];
+      this.sortWeaponCards();
     });
   }
 
@@ -66,5 +72,28 @@ export class CardsComponent implements OnInit {
       );
     });
     this.sortCards();
+  }
+
+  sortWeaponCards() {
+    this.filteredWeapons.sort((a, b) => {
+      switch (this.sortCriteria) {
+        case 'rarity-desc':
+          return (
+            this.rarityOrder.indexOf(b.rarity) -
+            this.rarityOrder.indexOf(a.rarity)
+          );
+        case 'rarity-asc':
+          return (
+            this.rarityOrder.indexOf(a.rarity) -
+            this.rarityOrder.indexOf(b.rarity)
+          );
+        case 'damage':
+          return b.damage - a.damage;
+        case 'weight':
+          return a.weight - b.weight;
+        default:
+          return 0;
+      }
+    });
   }
 }

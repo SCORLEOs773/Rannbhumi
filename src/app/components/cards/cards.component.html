@@ -1,34 +1,80 @@
-<div class="filter-bar">
-  <label>Sort By:</label>
-  <select [(ngModel)]="sortCriteria" (change)="sortCards()">
-    <option value="rarity-asc">Rarity (Low to High)</option>
-    <option value="rarity-desc">Rarity (High to Low)</option>
-    <option value="attack">Attack</option>
-    <option value="defense">Defense</option>
-    <option value="health">Health</option>
-  </select>
+<div class="animated-bg"></div>
 
-  <label>Filter by Faction:</label>
-  <select [(ngModel)]="selectedFaction" (change)="filterCards()">
-    <option value="">All</option>
-    <option *ngFor="let faction of factions" [value]="faction">
-      {{ faction }}
-    </option>
-  </select>
-
-  <label>Filter by Subtype:</label>
-  <select [(ngModel)]="selectedSubtype" (change)="filterCards()">
-    <option value="">All</option>
-    <option *ngFor="let subtype of subtypes" [value]="subtype">
-      {{ subtype }}
-    </option>
-  </select>
+<div class="tabs">
+  <button
+    (click)="activeTab = 'characters'"
+    [class.active]="activeTab === 'characters'"
+  >
+    Character Cards
+  </button>
+  <button
+    (click)="activeTab = 'weapons'"
+    [class.active]="activeTab === 'weapons'"
+  >
+    Weapon Cards
+  </button>
+  <button
+    (click)="activeTab = 'powers'"
+    [class.active]="activeTab === 'powers'"
+  >
+    Power Cards
+  </button>
 </div>
 
-<div class="animated-bg"></div>
-<div class="cards-container">
-  <app-character-card
-    *ngFor="let character of filteredCharacters"
-    [character]="character"
-  ></app-character-card>
+<div *ngIf="activeTab === 'characters'">
+  <div class="filter-bar">
+    <label>Sort By:</label>
+    <select [(ngModel)]="sortCriteria" (change)="sortCards()">
+      <option value="rarity-asc">Rarity (Low to High)</option>
+      <option value="rarity-desc">Rarity (High to Low)</option>
+      <option value="attack">Attack</option>
+      <option value="defense">Defense</option>
+      <option value="health">Health</option>
+    </select>
+
+    <label>Filter by Faction:</label>
+    <select [(ngModel)]="selectedFaction" (change)="filterCards()">
+      <option value="">All</option>
+      <option *ngFor="let faction of factions" [value]="faction">
+        {{ faction }}
+      </option>
+    </select>
+
+    <label>Filter by Subtype:</label>
+    <select [(ngModel)]="selectedSubtype" (change)="filterCards()">
+      <option value="">All</option>
+      <option *ngFor="let subtype of subtypes" [value]="subtype">
+        {{ subtype }}
+      </option>
+    </select>
+  </div>
+
+  <div class="cards-container">
+    <app-character-card
+      *ngFor="let character of filteredCharacters"
+      [character]="character"
+    ></app-character-card>
+  </div>
+</div>
+
+<div *ngIf="activeTab === 'weapons'">
+  <div class="filter-bar">
+    <label>Sort By:</label>
+    <select [(ngModel)]="sortCriteria" (change)="sortWeaponCards()">
+      <option value="rarity-asc">Rarity (Low to High)</option>
+      <option value="rarity-desc">Rarity (High to Low)</option>
+      <option value="damage">Damage</option>
+      <option value="weight">Weight</option>
+    </select>
+  </div>
+  <div class="cards-container">
+    <app-weapon-card
+      *ngFor="let weapon of filteredWeapons"
+      [weapon]="weapon"
+    ></app-weapon-card>
+  </div>
+</div>
+
+<div *ngIf="activeTab === 'powers'">
+  <h2>Power Cards (Coming Soon)</h2>
 </div>

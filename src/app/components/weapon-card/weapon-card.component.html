@@ -1,0 +1,22 @@
+<div class="card-container" [ngClass]="getRarityClass(weapon.rarity)">
+  <div class="card-header">
+    <h2>{{ weapon.name }}</h2>
+    <span class="rarity">{{ weapon.rarity }}</span>
+  </div>
+
+  <div class="card-image-container">
+    <img [src]="weapon.image" alt="{{ weapon.name }}" class="card-image" />
+  </div>
+
+  <div class="card-info">
+    <p class="subtype">{{ weapon.subtype }}</p>
+    <div class="stats">
+      <span>⚔️ {{ weapon.attack }}</span>
+      <span>🛡️ {{ weapon.defense }}</span>
+      <span>⚡ Cost: {{ weapon.energy_cost }}</span>
+    </div>
+    <div class="ability">
+      <strong>🎇 {{ weapon.special_ability }}</strong>
+    </div>
+  </div>
+</div>
