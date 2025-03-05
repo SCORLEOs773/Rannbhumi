@@ -48,11 +48,6 @@
   background: linear-gradient(45deg, silver, grey, white, silver);
 }
 
-/* Hover Effect */
-.card-container:hover {
-  transform: scale(1.05);
-}
-
 /* 🔱 Header Section */
 .card-header {
   display: flex;

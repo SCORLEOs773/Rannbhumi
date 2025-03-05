@@ -1,0 +1,92 @@
+.animated-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: linear-gradient(90deg, #120136, #2a004f, #120136);
+  animation: bgMove 10s infinite linear alternate;
+}
+
+@keyframes bgMove {
+  from {
+    background-position: left;
+  }
+  to {
+    background-position: right;
+  }
+}
+
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("/assets/bg.jpg") no-repeat center center/cover;
+}
+
+.signup-box {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  color: gold;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  .input-group {
+    margin-bottom: 1rem;
+    text-align: left;
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.3rem;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.5rem;
+      border: none;
+      border-radius: 5px;
+      background: #222;
+      color: white;
+    }
+  }
+
+  .signup-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background: gold;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+
+    &:hover {
+      background: darkgoldenrod;
+    }
+  }
+
+  .login-link {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+
+    a {
+      color: gold;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

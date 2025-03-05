@@ -1,0 +1,189 @@
+<div class="how-to-play-container">
+  <div class="animated-bg"></div>
+
+  <!-- Introduction -->
+  <section class="intro">
+    <h1>How to Play Rannbhumi</h1>
+    <p>
+      Master the battlefield by summoning powerful warriors, strategizing
+      wisely, and defeating your opponents.
+    </p>
+  </section>
+
+  <!-- Game Mechanics (Using Mat Cards) -->
+  <section class="game-mechanics">
+    <h2>Game Mechanics</h2>
+    <div class="cards">
+      <mat-card class="game-card">
+        <mat-card-title>Summon Cards</mat-card-title>
+        <mat-card-content
+          >Use the Gacha system to summon warriors of different
+          rarities.</mat-card-content
+        >
+      </mat-card>
+
+      <mat-card class="game-card">
+        <mat-card-title>Battle Strategies</mat-card-title>
+        <mat-card-content
+          >Form teams based on warrior strengths and counter your
+          enemies.</mat-card-content
+        >
+      </mat-card>
+
+      <mat-card class="game-card">
+        <mat-card-title>Resource Management</mat-card-title>
+        <mat-card-content
+          >Manage in-game resources like energy, gold, and
+          upgrades.</mat-card-content
+        >
+      </mat-card>
+    </div>
+  </section>
+
+  <!-- Winning Strategies (Using Mat Expansion Panels) -->
+  <section class="strategies">
+    <h2>Winning Strategies</h2>
+    <mat-accordion multi="true">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title> Best Warrior Combinations </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          Choose a balanced team with <span class="highlight">Attackers</span>,
+          <span class="highlight">Defenders</span>, and
+          <span class="highlight">Support</span> units. Counter enemy formations
+          by exploiting weaknesses.
+        </p>
+        <ul>
+          <li>
+            <span class="highlight">Attackers:</span> High DPS warriors for
+            offense (e.g., Arjun, Bheem).
+          </li>
+          <li>
+            <span class="highlight">Defenders:</span> Tanks that absorb damage
+            (e.g., Bhishma, Hanuman).
+          </li>
+          <li>
+            <span class="highlight">Support:</span> Healers and buffers to
+            sustain your team (e.g., Guru Dron).
+          </li>
+        </ul>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title> Advanced Battle Tactics </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          Master battlefield positioning, ultimate move timings, and
+          counter-attacks.
+        </p>
+        <ul>
+          <li>
+            <span class="highlight">Positioning:</span> Keep ranged units behind
+            tanks for protection.
+          </li>
+          <li>
+            <span class="highlight">Counter Moves:</span> Use stun abilities to
+            disable enemy damage dealers.
+          </li>
+          <li>
+            <span class="highlight">Ultimate Usage:</span> Don't waste ultimate
+            attacks early, save them for decisive moments.
+          </li>
+        </ul>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title> Resource Management Tips </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>Manage in-game resources wisely to stay ahead in battles.</p>
+        <ul>
+          <li>
+            <span class="highlight">Gold:</span> Prioritize upgrades for your
+            strongest warriors.
+          </li>
+          <li>
+            <span class="highlight">Energy:</span> Plan battles to avoid running
+            out of stamina mid-game.
+          </li>
+          <li>
+            <span class="highlight">Artifacts:</span> Equip artifacts that
+            enhance your strategy (e.g., defensive or offensive buffs).
+          </li>
+        </ul>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title> Understanding Enemy Patterns </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          Learn how different AI and player opponents behave to counter them
+          effectively.
+        </p>
+        <ul>
+          <li>
+            <span class="highlight">Aggressive Players:</span> Use defensive
+            tactics and counterattacks.
+          </li>
+          <li>
+            <span class="highlight">Defensive Players:</span> Break through with
+            high burst damage warriors.
+          </li>
+          <li>
+            <span class="highlight">AI Boss Fights:</span> Observe attack
+            patterns and time dodges perfectly.
+          </li>
+        </ul>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title> Training & Skill Progression </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          Improve your warriors' efficiency through strategic training and
+          upgrades.
+        </p>
+        <ul>
+          <li>
+            <span class="highlight">XP Farming:</span> Focus on daily missions
+            and high-reward battles.
+          </li>
+          <li>
+            <span class="highlight">Skill Trees:</span> Unlock abilities that
+            fit your playstyle.
+          </li>
+          <li>
+            <span class="highlight">Synergy:</span> Train warriors with
+            abilities that complement each other.
+          </li>
+        </ul>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </section>
+
+  <!-- Step-by-Step Game Flow -->
+  <section class="game-flow">
+    <h2>Game Flow</h2>
+
+    <div class="flow-buttons">
+      <button
+        mat-button
+        *ngFor="let step of steps; let i = index"
+        (click)="selectStep(i)"
+        [class.active]="i === currentStep"
+      >
+        {{ step.title }}
+      </button>
+    </div>
+
+    <div class="flow-content">
+      <p *ngIf="currentStep !== null" class="flow-text">
+        {{ steps[currentStep].description }}
+      </p>
+    </div>
+  </section>
+</div>
