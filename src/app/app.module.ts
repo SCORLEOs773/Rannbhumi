@@ -15,6 +15,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { CardsComponent } from './components/cards/cards.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { MatButtonModule } from '@angular/material/button';
     NavbarComponent,
     SignupComponent,
     HowToPlayComponent,
+    CardsComponent,
   ],
   imports: [
     BrowserModule,
