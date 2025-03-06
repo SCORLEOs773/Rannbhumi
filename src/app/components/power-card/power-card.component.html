@@ -1,0 +1,22 @@
+<div class="card-container" [ngClass]="getRarityClass(power.rarity)">
+  <div class="card-header">
+    <h2>{{ power.name }}</h2>
+    <!-- <span class="rarity">{{ power.rarity }}</span> -->
+  </div>
+
+  <div class="card-image-container">
+    <img [src]="power.image_url" [alt]="power.name" class="card-image" />
+  </div>
+
+  <div class="card-info">
+    <p class="faction">{{ power.faction }}</p>
+    <div class="stats">
+      <span>⚡ Cost: {{ power.energy_cost }}</span>
+      <span>⏳ Cooldown: {{ power.cooldown }}s</span>
+    </div>
+    <div class="ability">
+      <strong>🎇 Effect: {{ power.effect }}</strong>
+    </div>
+    <p class="description">{{ power.description }}</p>
+  </div>
+</div>

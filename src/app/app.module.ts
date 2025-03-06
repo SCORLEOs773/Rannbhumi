@@ -17,6 +17,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { CardsComponent } from './components/cards/cards.component';
 import { WeaponCardComponent } from './components/weapon-card/weapon-card.component';
+import { PowerCardComponent } from './components/power-card/power-card.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { WeaponCardComponent } from './components/weapon-card/weapon-card.compon
     HowToPlayComponent,
     CardsComponent,
     WeaponCardComponent,
+    PowerCardComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,20 +1,106 @@
+.animated-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: linear-gradient(90deg, #120136, #2a004f, #120136);
+  animation: bgMove 10s infinite linear alternate;
+}
+
+@keyframes bgMove {
+  from {
+    background-position: left;
+  }
+  to {
+    background-position: right;
+  }
+}
+
 .gacha-container {
   text-align: center;
   padding: 20px;
   margin-top: 5rem;
 }
 
-.character-card {
-  margin-top: 20px;
+.gacha-section {
+  margin-bottom: 2rem;
   padding: 15px;
-  border: 2px solid gold;
-  display: inline-block;
   border-radius: 10px;
   background-color: #f5f5dc;
+  display: inline-block;
+  border: 2px solid gold;
 }
 
 button {
+  padding: 10px 15px;
+  font-size: 16px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+
+.modal-content {
+  width: 100%;
+  max-width: 1400px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.pulled-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.card-reveal {
+  opacity: 0;
+  transform: scale(1);
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
+/* 🎯 Reduce card size */
+.card-small {
+  transform: scale(0.7); /* 70% of original size */
+}
+
+.claim-button {
+  margin-top: 20px;
   padding: 10px 20px;
   font-size: 18px;
   cursor: pointer;
+}
+
+/* 🎇 Animation for card reveal */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(0.7);
+  }
 }

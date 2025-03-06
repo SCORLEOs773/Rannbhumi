@@ -1,7 +1,62 @@
 <div class="gacha-container">
-  <button (click)="pullCharacter()">Pull a Character</button>
+  <div class="animated-bg"></div>
+  <!-- 🎭 Character Gacha Section -->
+  <div class="gacha-section">
+    <h2>🎭 Pull a Character</h2>
+    <button (click)="pullCharacter(1)">Pull 1</button>
+    <button (click)="pullCharacter(5)">Pull 5</button>
+    <button (click)="pullCharacter(10)">Pull 10</button>
+  </div>
 
-  <div *ngIf="pulledCharacter">
-    <app-character-card [character]="pulledCharacter"></app-character-card>
+  <!-- ⚔️ Weapon Gacha Section -->
+  <div class="gacha-section">
+    <h2>⚔️ Pull a Weapon</h2>
+    <button (click)="pullWeapon(1)">Pull 1</button>
+    <button (click)="pullWeapon(5)">Pull 5</button>
+    <button (click)="pullWeapon(10)">Pull 10</button>
+  </div>
+
+  <!-- 🔱 Power Gacha Section -->
+  <div class="gacha-section">
+    <h2>🔱 Pull a Power</h2>
+    <button (click)="pullPower(1)">Pull 1</button>
+    <button (click)="pullPower(5)">Pull 5</button>
+    <button (click)="pullPower(10)">Pull 10</button>
+  </div>
+</div>
+
+<!-- 🎇 Modal Popup -->
+<div class="modal" *ngIf="showModal">
+  <div class="modal-content">
+    <h2>You Pulled:</h2>
+
+    <!-- Display Pulled Cards in Grid -->
+    <div class="pulled-cards">
+      <div *ngFor="let row of cardRows; let rowIdx = index" class="row">
+        <div
+          *ngFor="let card of row; let i = index"
+          class="card-reveal card-small"
+          [style.animationDelay]="i + rowIdx * 5 + 's'"
+        >
+          <app-character-card
+            *ngIf="gachaType === 'character'"
+            [character]="card"
+          ></app-character-card>
+          <app-weapon-card
+            *ngIf="gachaType === 'weapon'"
+            [weapon]="card"
+          ></app-weapon-card>
+          <app-power-card
+            *ngIf="gachaType === 'power'"
+            [power]="card"
+          ></app-power-card>
+        </div>
+      </div>
+    </div>
+
+    <!-- Claim Button (appears after last card is revealed) -->
+    <button class="claim-button" *ngIf="showClaimButton" (click)="closeModal()">
+      Claim
+    </button>
   </div>
 </div>

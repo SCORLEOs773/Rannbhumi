@@ -12,52 +12,37 @@
   position: relative;
   background-size: 300% 300%;
   animation: glowingBackground 5s infinite alternate;
-}
-
-/* Animation */
-@keyframes glowingBackground {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
-}
-
-/* 🔥 Dynamic Background Colors */
-.legendary {
-  background: linear-gradient(45deg, gold, orange, yellow, gold);
-}
-.mythic {
-  background: linear-gradient(
-    45deg,
-    crimson,
-    darkred,
-    gold,
-    firebrick,
-    crimson
-  );
-}
-.epic {
-  background: linear-gradient(45deg, purple, darkmagenta, violet, purple);
-}
-.rare {
-  background: linear-gradient(45deg, blue, darkblue, cyan, blue);
-}
-.common {
-  background: linear-gradient(45deg, silver, grey, white, silver);
+  color: white;
 }
 
 /* 🔱 Header Section */
 .card-header {
-  text-align: center;
-  display: inline-block;
+  display: flex;
+  justify-content: center; /* Center the title */
   align-items: center;
-  font-size: 18px;
   font-weight: bold;
   padding: 5px;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Auto-Resizing Title */
+.card-header h2 {
+  font-size: 22px;
+  max-width: 90%;
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+}
+
+/* Auto-Scale Title Based on Length */
+.card-header h2 {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: clamp(14px, 5vw, 22px); /* Scales text size dynamically */
 }
 
 /* 🖼️ Image Section */
@@ -105,4 +90,35 @@
   font-size: 14px;
   font-style: italic;
   color: rgba(255, 255, 255, 0.9);
+}
+
+/* 📝 Description */
+.description {
+  font-style: italic;
+  color: #ddd;
+  margin-top: 5px;
+}
+
+/* 🔥 Dynamic Background Colors (Rarity-Based) */
+.legendary {
+  background: linear-gradient(45deg, gold, orange, yellow, gold);
+}
+.mythic {
+  background: linear-gradient(
+    45deg,
+    crimson,
+    darkred,
+    gold,
+    firebrick,
+    crimson
+  );
+}
+.epic {
+  background: linear-gradient(45deg, purple, darkmagenta, violet, purple);
+}
+.rare {
+  background: linear-gradient(45deg, blue, darkblue, cyan, blue);
+}
+.common {
+  background: linear-gradient(45deg, silver, grey, white, silver);
 }

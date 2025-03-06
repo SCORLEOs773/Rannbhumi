@@ -12,6 +12,8 @@ export class CardsComponent implements OnInit {
   filteredCharacters: any[] = [];
   weapons: any[] = [];
   filteredWeapons: any[] = [];
+  powers: any[] = [];
+  filteredPowers: any[] = [];
   sortCriteria: string = 'rarity-asc';
   selectedFaction: string = '';
   selectedSubtype: string = '';
@@ -36,6 +38,12 @@ export class CardsComponent implements OnInit {
       this.weapons = data;
       this.filteredWeapons = [...this.weapons];
       this.sortWeaponCards();
+    });
+
+    this.http.get<any[]>('assets/PowerCards.json').subscribe((data) => {
+      this.powers = data;
+      this.filteredPowers = [...this.powers];
+      this.sortPowerCards();
     });
   }
 
@@ -91,6 +99,27 @@ export class CardsComponent implements OnInit {
           return b.damage - a.damage;
         case 'weight':
           return a.weight - b.weight;
+        default:
+          return 0;
+      }
+    });
+  }
+
+  sortPowerCards() {
+    this.filteredPowers.sort((a, b) => {
+      switch (this.sortCriteria) {
+        case 'rarity-desc':
+          return (
+            this.rarityOrder.indexOf(b.rarity) -
+            this.rarityOrder.indexOf(a.rarity)
+          );
+        case 'rarity-asc':
+          return (
+            this.rarityOrder.indexOf(a.rarity) -
+            this.rarityOrder.indexOf(b.rarity)
+          );
+        case 'effect':
+          return b.effectPower - a.effectPower;
         default:
           return 0;
       }

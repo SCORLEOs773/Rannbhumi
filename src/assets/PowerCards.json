@@ -10,7 +10,7 @@
     "faction": "Divine",
     "gacha_drop_rate": 15,
     "description": "A celestial boon that heals the wounded.",
-    "image_url": "images/power_divine_blessing.png"
+    "image_url": "https://miro.medium.com/v2/resize:fit:1024/1*NKy-Oi_ZlmDOlAqLxGKQKQ.jpeg"
   },
   {
     "id": 2,
@@ -23,7 +23,7 @@
     "faction": "Shiva",
     "gacha_drop_rate": 10,
     "description": "A glimpse into the future, revealing enemy plans.",
-    "image_url": "images/power_third_eye.png"
+    "image_url": "https://mythlok.b-cdn.net/wp-content/uploads/2023/08/3rd-eye.jpg"
   },
   {
     "id": 3,
@@ -36,7 +36,7 @@
     "faction": "Sages",
     "gacha_drop_rate": 6,
     "description": "A powerful curse that weakens foes drastically.",
-    "image_url": "images/power_curse_sage.png"
+    "image_url": "https://vedicfeed.com/wp-content/uploads/2022/06/Sage-Durvasa-Curses-Shakuntala.jpg"
   },
   {
     "id": 4,
@@ -49,7 +49,7 @@
     "faction": "Indra",
     "gacha_drop_rate": 10,
     "description": "Summon Indra's divine shield to block any attack.",
-    "image_url": "images/power_vajra_shield.png"
+    "image_url": "https://static.wikia.nocookie.net/soulland/images/a/a4/Vajra_Shield.jpeg"
   },
   {
     "id": 5,
@@ -62,7 +62,7 @@
     "faction": "Divine",
     "gacha_drop_rate": 3,
     "description": "Bend time to gain an extra move.",
-    "image_url": "images/power_time_manipulation.png"
+    "image_url": "https://miro.medium.com/v2/resize:fit:500/1*exqKU3uoVEadA-g2XR3gcQ.jpeg"
   },
   {
     "id": 6,
@@ -75,7 +75,7 @@
     "faction": "Rakshasa",
     "gacha_drop_rate": 6,
     "description": "Channel the wrath of a demon to unleash destruction.",
-    "image_url": "images/power_rakshasa_fury.png"
+    "image_url": "https://arsgoetiademons.com/cdn/shop/articles/rakshasa.png?v=1727773166"
   },
   {
     "id": 7,
@@ -88,7 +88,7 @@
     "faction": "Krishna",
     "gacha_drop_rate": 10,
     "description": "Summon Sudarshan Chakra to defend against enemies.",
-    "image_url": "images/power_sudarshan_shield.png"
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Chakra_ayudhapurusha.jpg/220px-Chakra_ayudhapurusha.jpg"
   },
   {
     "id": 8,
@@ -101,7 +101,7 @@
     "faction": "Divine",
     "gacha_drop_rate": 15,
     "description": "A cleansing ritual that restores balance.",
-    "image_url": "images/power_chakra_purification.png"
+    "image_url": "https://hinduismtoday.b-cdn.net/wp-content/uploads/1998/07/insight1998-7.jpg"
   },
   {
     "id": 9,
@@ -114,7 +114,7 @@
     "faction": "Sages",
     "gacha_drop_rate": 6,
     "description": "Tap into deep meditation to regain inner strength.",
-    "image_url": "images/power_yogic_trance.png"
+    "image_url": "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5c631d8c-ab43-4490-8862-61cfeede66c1_1024x1024.png"
   },
   {
     "id": 10,
@@ -127,7 +127,7 @@
     "faction": "Shiva",
     "gacha_drop_rate": 3,
     "description": "Unleash Rudra’s divine rage to eliminate a weak foe.",
-    "image_url": "images/power_rudras_wrath.png"
+    "image_url": "https://img.freepik.com/premium-photo/bholenath-rudra-roop_1165568-106.jpg"
   },
   {
     "id": 11,
@@ -139,7 +139,7 @@
     "energy_cost": 4,
     "gacha_drop_rate": 5,
     "description": "A thunderous strike imbued with the power of Lord Indra.",
-    "image": "vajra_strike.png"
+    "image": "https://static.wikia.nocookie.net/the-demonic-paradise/images/8/82/Indra.jpg/revision/latest/thumbnail/width/360/height/450?cb=20140818161633"
   },
   {
     "id": 12,
@@ -151,7 +151,7 @@
     "energy_cost": 5,
     "gacha_drop_rate": 3,
     "description": "A divine attack channeling the destructive force of Lord Shiva.",
-    "image": "trishul_wrath.png"
+    "image": "https://historified.in/wp-content/uploads/2024/05/e914c8ef5579dd849439e946d7cc3986.jpg"
   },
   {
     "id": 13,
@@ -163,7 +163,7 @@
     "energy_cost": 6,
     "gacha_drop_rate": 2,
     "description": "A divine herb that brings warriors back from the brink of death.",
-    "image": "sanjeevani_elixir.png"
+    "image": "https://www.ramana-maharshi.org/wp-content/uploads/2024/01/mj_17196_2.jpg"
   },
   {
     "id": 14,
@@ -175,7 +175,7 @@
     "energy_cost": 3,
     "gacha_drop_rate": 5,
     "description": "A protective shield formed by divine energy.",
-    "image": "chakra_protection.png"
+    "image": "https://demystifyingkundalini.com/wp-content/uploads/2023/12/oig282529-1.jpeg?w=825&h=510&crop=1"
   },
   {
     "id": 15,
@@ -187,7 +187,7 @@
     "energy_cost": 5,
     "gacha_drop_rate": 3,
     "description": "The eight divine abilities granted by Lord Hanuman.",
-    "image": "ashta_siddhi.png"
+    "image": "https://starzspeak.com/uploads/2022/05/84c19f655b3cebbc594b2c52329728b5.webp"
   },
   {
     "id": 16,
@@ -199,7 +199,7 @@
     "energy_cost": 6,
     "gacha_drop_rate": 2,
     "description": "A terrifying curse that weakens the mightiest warriors.",
-    "image": "kaal_bhairav_curse.png"
+    "image": "https://sanity-admin.rudraksha-ratna.com/static/images/blogs/lord+bhairav+new.jpg"
   },
   {
     "id": 17,
@@ -211,7 +211,7 @@
     "energy_cost": 4,
     "gacha_drop_rate": 5,
     "description": "A powerful illusion used by demons to confuse their foes.",
-    "image": "rakshasa_illusion.png"
+    "image": "https://oldworldgods.com/wp-content/uploads/2023/11/rakshasa2.jpg"
   },
   {
     "id": 18,
@@ -223,7 +223,7 @@
     "energy_cost": 5,
     "gacha_drop_rate": 3,
     "description": "A gateway to spiritual liberation that purifies the soul.",
-    "image": "moksha_gateway.png"
+    "image": "https://static.wixstatic.com/media/4d32f3_703ccd7d428c427596386f816a62fe25~mv2.jpg/v1/fill/w_568,h_320,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/4d32f3_703ccd7d428c427596386f816a62fe25~mv2.jpg"
   },
   {
     "id": 19,
@@ -235,7 +235,7 @@
     "energy_cost": 7,
     "gacha_drop_rate": 1,
     "description": "The deadliest divine weapon of Lord Shiva, capable of annihilation.",
-    "image": "pashupatastra_seal.png"
+    "image": "https://th-i.thgim.com/public/incoming/ofuhrh/article65073960.ece/alternates/FREE_1200/27SM%20Islamabad%20Seal.jpg"
   },
   {
     "id": 20,
@@ -247,7 +247,7 @@
     "energy_cost": 3,
     "gacha_drop_rate": 5,
     "description": "A divine blessing from the Sun God that revitalizes warriors.",
-    "image": "surya_blessing.png"
+    "image": "https://www.ramana-maharshi.org/wp-content/uploads/2024/08/f1c8c721b39b41fa31aa6172ce3f8f37.png"
   },
   {
     "id": 21,
@@ -259,7 +259,7 @@
     "energy_cost": 5,
     "gacha_drop_rate": 3,
     "description": "A divine shield granted by Lord Vishnu, impenetrable to mortal weapons.",
-    "image": "narayan_shield.png"
+    "image": "https://hinduismtoday.b-cdn.net/wp-content/uploads/2012/07/insight2012-3.jpg"
   },
   {
     "id": 22,
@@ -271,7 +271,7 @@
     "energy_cost": 6,
     "gacha_drop_rate": 2,
     "description": "A devastating surge of divine rage unleashed upon enemies.",
-    "image": "mahakal_fury.png"
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvgeRyjzml-dZtKnUOZCoCO4GAyg_OacPcBg&s"
   },
   {
     "id": 23,
@@ -283,7 +283,7 @@
     "energy_cost": 4,
     "gacha_drop_rate": 3,
     "description": "A celestial armor gifted by the Sun God, making the wearer nearly invincible.",
-    "image": "karna_golden_armor.png"
+    "image": "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F620073a8-2215-44b1-aed5-edf58390b040_1024x1024.png"
   },
   {
     "id": 24,
@@ -295,7 +295,7 @@
     "energy_cost": 3,
     "gacha_drop_rate": 5,
     "description": "The mystical gem of serpents, purifying its possessor of any evil affliction.",
-    "image": "nagmani_charm.png"
+    "image": "https://qph.cf2.quoracdn.net/main-qimg-65b20ae6a5a1c5bbcf7ccb06f3976c92-lq"
   },
   {
     "id": 25,
@@ -307,7 +307,7 @@
     "energy_cost": 5,
     "gacha_drop_rate": 3,
     "description": "A gift from the Wind God that grants divine swiftness.",
-    "image": "vayu_blessing.png"
+    "image": "https://theindosphere.com/wp-content/uploads/2024/10/DALL%C2%B7E-2024-10-25-13.16.27-A-majestic-depiction-of-Vayu-the-Hindu-god-of-wind-standing-amidst-swirling-clouds-and-gusts-of-wind.-Vayu-is-portrayed-as-a-powerful-figure-with-a-.webp"
   },
   {
     "id": 26,
@@ -319,7 +319,7 @@
     "energy_cost": 6,
     "gacha_drop_rate": 2,
     "description": "The warrior aspect of the Goddess unleashes unbridled fury.",
-    "image": "chandika_rage.png"
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZg12Es9OTI5DOnx_9L1X5MgrCcO7tbpnhgg&s"
   },
   {
     "id": 27,
@@ -331,7 +331,7 @@
     "energy_cost": 4,
     "gacha_drop_rate": 5,
     "description": "The celestial shadow swallows fate itself, disrupting destiny.",
-    "image": "rahu_eclipse.png"
+    "image": "https://www.advaita-vision.org/wp-content/uploads/2020/08/PS-rahu.jpg"
   },
   {
     "id": 28,
@@ -343,7 +343,7 @@
     "energy_cost": 5,
     "gacha_drop_rate": 3,
     "description": "The fierce goddess strikes terror into the hearts of foes.",
-    "image": "kali_dominion.png"
+    "image": "https://www.talesofsanatan.com/wp-content/uploads/2024/10/mahakala-and-goddess-kali.webp"
   },
   {
     "id": 29,
@@ -355,7 +355,7 @@
     "energy_cost": 4,
     "gacha_drop_rate": 5,
     "description": "The ocean god’s power resets the tides of battle.",
-    "image": "varuna_tidal_wave.png"
+    "image": "https://warsandhistory.com/wp-content/uploads/2024/09/suamooveehanisfan_A_majestic_image_of_Varuna_the_Hindu_god_of_t_2141c108-441d-4b45-9dd4-7f22e63e4c74.webp"
   },
   {
     "id": 30,
@@ -367,6 +367,6 @@
     "energy_cost": 7,
     "gacha_drop_rate": 1,
     "description": "The invocation of divine feminine energy replenishes the soul.",
-    "image": "shakti_invocation.png"
+    "image": "https://vedicfeed.com/wp-content/uploads/2018/06/Devi-Shakti-Devi-loka.jpg"
   }
 ]

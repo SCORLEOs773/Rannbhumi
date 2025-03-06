@@ -1,20 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-interface Character {
+interface Card {
   id: number;
   name: string;
-  type: string;
-  subtype: string;
   rarity: string;
-  attack: number;
-  defense: number;
-  health: number;
-  special_ability: string;
-  energy_cost: number;
-  faction: string;
   gacha_drop_rate: number;
-  description: string;
   image: string;
 }
 
@@ -24,35 +15,98 @@ interface Character {
   styleUrls: ['./gacha.component.css'],
 })
 export class GachaComponent implements OnInit {
-  characters: Character[] = [];
-  pulledCharacter: Character | null = null;
+  characters: Card[] = [];
+  weapons: Card[] = [];
+  powers: Card[] = [];
+
+  pulledCards: Card[] = [];
+  cardRows: Card[][] = [];
+  showModal = false;
+  showClaimButton = false;
+  gachaType: 'character' | 'weapon' | 'power' = 'character';
 
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
     this.http
-      .get<Character[]>('assets/CharacterCards.json')
-      .subscribe((data) => {
-        this.characters = data;
-      });
+      .get<Card[]>('assets/CharacterCards.json')
+      .subscribe((data) => (this.characters = data));
+    this.http
+      .get<Card[]>('assets/WeaponCards.json')
+      .subscribe((data) => (this.weapons = data));
+    this.http
+      .get<Card[]>('assets/PowerCards.json')
+      .subscribe((data) => (this.powers = data));
   }
 
-  pullCharacter() {
-    if (this.characters.length === 0) return;
+  // 🎭 Pull Character
+  pullCharacter(count: number) {
+    this.gachaType = 'character';
+    this.pulledCards = this.pullMultipleCards(this.characters, count);
+    this.showPulledCards();
+  }
 
-    // 🎲 Weight-based random selection using `gacha_drop_rate`
-    const totalWeight = this.characters.reduce(
-      (sum, char) => sum + char.gacha_drop_rate,
+  // ⚔️ Pull Weapon
+  pullWeapon(count: number) {
+    this.gachaType = 'weapon';
+    this.pulledCards = this.pullMultipleCards(this.weapons, count);
+    this.showPulledCards();
+  }
+
+  // 🔱 Pull Power
+  pullPower(count: number) {
+    this.gachaType = 'power';
+    this.pulledCards = this.pullMultipleCards(this.powers, count);
+    this.showPulledCards();
+  }
+
+  // 🧮 Pull multiple cards
+  pullMultipleCards(cards: Card[], count: number): Card[] {
+    const pulled: Card[] = [];
+    for (let i = 0; i < count; i++) {
+      const card = this.pullRandomCard(cards);
+      if (card) pulled.push(card);
+    }
+    return pulled;
+  }
+
+  // 🎲 Weighted Random Selection
+  pullRandomCard(cards: Card[]): Card | null {
+    if (cards.length === 0) return null;
+
+    const totalWeight = cards.reduce(
+      (sum, card) => sum + card.gacha_drop_rate,
       0
     );
     let randomNum = Math.random() * totalWeight;
 
-    for (let char of this.characters) {
-      if (randomNum < char.gacha_drop_rate) {
-        this.pulledCharacter = char;
-        return;
-      }
-      randomNum -= char.gacha_drop_rate;
+    for (let card of cards) {
+      if (randomNum < card.gacha_drop_rate) return card;
+      randomNum -= card.gacha_drop_rate;
     }
+    return null;
+  }
+
+  // 🎇 Show Pulled Cards in Rows
+  showPulledCards() {
+    this.showModal = true;
+    this.showClaimButton = false;
+    this.cardRows = [];
+
+    // Split pulled cards into rows of 5
+    for (let i = 0; i < this.pulledCards.length; i += 5) {
+      this.cardRows.push(this.pulledCards.slice(i, i + 5));
+    }
+
+    let totalDelay = this.pulledCards.length; // Total delay time
+    setTimeout(() => {
+      this.showClaimButton = true;
+    }, totalDelay * 1000); // Claim button appears after all cards are revealed
+  }
+
+  // ❌ Close Modal
+  closeModal() {
+    this.showModal = false;
+    this.cardRows = [];
   }
 }

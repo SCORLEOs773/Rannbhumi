@@ -30,8 +30,8 @@
 }
 
 .card-header {
-  display: flex;
-  justify-content: space-between;
+  text-align: center;
+  display: inline-block;
   align-items: center;
   font-size: 18px;
   font-weight: bold;

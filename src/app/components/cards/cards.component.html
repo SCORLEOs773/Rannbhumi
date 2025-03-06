@@ -57,6 +57,7 @@
   </div>
 </div>
 
+<!-- Weapon Cards Section -->
 <div *ngIf="activeTab === 'weapons'">
   <div class="filter-bar">
     <label>Sort By:</label>
@@ -75,6 +76,22 @@
   </div>
 </div>
 
+<!-- Power Cards Section -->
 <div *ngIf="activeTab === 'powers'">
-  <h2>Power Cards (Coming Soon)</h2>
+  <div class="filter-bar">
+    <label>Sort By:</label>
+    <select [(ngModel)]="sortCriteria" (change)="sortPowerCards()">
+      <option value="rarity-asc">Rarity (Low to High)</option>
+      <option value="rarity-desc">Rarity (High to Low)</option>
+      <option value="effectiveness">Effectiveness</option>
+      <option value="cooldown">Cooldown Time</option>
+    </select>
+  </div>
+
+  <div class="cards-container">
+    <app-power-card
+      *ngFor="let power of filteredPowers"
+      [power]="power"
+    ></app-power-card>
+  </div>
 </div>

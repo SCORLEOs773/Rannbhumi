@@ -165,7 +165,7 @@
     "energy_cost": 7,
     "gacha_drop_rate": 2,
     "description": "The battle axe of Lord Parshuram, capable of cutting through any defense.",
-    "image": "parashu_parshuram.png"
+    "image": "https://preview.redd.it/k4f8ucggxll61.jpg?width=320&format=pjpg&auto=webp&s=df9c60f21ee83a471ab85dd53423bb32b2e3d2be"
   },
   {
     "id": 13,
@@ -179,7 +179,7 @@
     "energy_cost": 6,
     "gacha_drop_rate": 3,
     "description": "The divine mace wielded by Lord Vishnu, known for its immense strength.",
-    "image": "kaumodaki_mace.png"
+    "image": "https://i.pinimg.com/736x/ce/9b/13/ce9b13d1acc0fbbbcc3e004a0cf2ea13.jpg"
   },
   {
     "id": 14,
@@ -193,7 +193,7 @@
     "energy_cost": 4,
     "gacha_drop_rate": 5,
     "description": "A mystical staff associated with ascetics and warriors alike.",
-    "image": "khatvanga_staff.png"
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvBvAnRybaA_bYryire72GHRMSINKJUr-Reg&s"
   },
   {
     "id": 15,
@@ -207,7 +207,7 @@
     "energy_cost": 8,
     "gacha_drop_rate": 1,
     "description": "An advanced version of Brahmastra, capable of mass destruction.",
-    "image": "brahmashirsha_astra.png"
+    "image": "https://qph.cf2.quoracdn.net/main-qimg-673ba459bb5298fa875c481fa286d0bd.webp"
   },
   {
     "id": 16,
@@ -221,7 +221,7 @@
     "energy_cost": 7,
     "gacha_drop_rate": 3,
     "description": "The divine rod of Yama, the god of death, which enforces cosmic justice.",
-    "image": "danda_yama.png"
+    "image": "https://dharmapulse.com/wp-content/uploads/2024/11/Yama-the-Hindu-God-of-Death-and-Afterlife.webp"
   },
   {
     "id": 17,
@@ -235,7 +235,7 @@
     "energy_cost": 6,
     "gacha_drop_rate": 3,
     "description": "The mighty plow weapon wielded by Lord Balarama.",
-    "image": "halayudha.png"
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-77fKCSLlzgyzOPccM694BO7SzSAtmEVENA&s"
   },
   {
     "id": 18,
@@ -249,7 +249,7 @@
     "energy_cost": 7,
     "gacha_drop_rate": 2,
     "description": "A divine spear that once brought Lord Lakshman to his knees in battle.",
-    "image": "shakti_indrajit.png"
+    "image": "https://i.pinimg.com/originals/65/f9/b9/65f9b99c7a32ad8b1e3bf98b493140bb.jpg"
   },
   {
     "id": 19,
@@ -263,7 +263,7 @@
     "energy_cost": 5,
     "gacha_drop_rate": 5,
     "description": "A fire-based divine weapon that engulfs enemies in flames.",
-    "image": "agneyastra.png"
+    "image": "https://i.pinimg.com/736x/96/8f/82/968f829977e13a77c05c822ce9490824.jpg"
   },
   {
     "id": 20,
@@ -277,6 +277,6 @@
     "energy_cost": 5,
     "gacha_drop_rate": 5,
     "description": "A snake-infused celestial weapon that binds enemies in its grasp.",
-    "image": "nagastra.png"
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4HHG1EC6zJmdKeCaLs2wKfw0i_sButObiGw&s"
   }
 ]
