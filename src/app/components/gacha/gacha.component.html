@@ -4,24 +4,29 @@
   <div class="gacha-section">
     <h2>🎭 Pull a Character</h2>
     <button (click)="pullCharacter(1)">Pull 1</button>
+    <button (click)="pullCharacter(3)">Pull 3</button>
     <button (click)="pullCharacter(5)">Pull 5</button>
-    <button (click)="pullCharacter(10)">Pull 10</button>
   </div>
 
   <!-- ⚔️ Weapon Gacha Section -->
   <div class="gacha-section">
     <h2>⚔️ Pull a Weapon</h2>
     <button (click)="pullWeapon(1)">Pull 1</button>
+    <button (click)="pullWeapon(3)">Pull 3</button>
     <button (click)="pullWeapon(5)">Pull 5</button>
-    <button (click)="pullWeapon(10)">Pull 10</button>
   </div>
 
   <!-- 🔱 Power Gacha Section -->
   <div class="gacha-section">
     <h2>🔱 Pull a Power</h2>
     <button (click)="pullPower(1)">Pull 1</button>
+    <button (click)="pullPower(3)">Pull 3</button>
     <button (click)="pullPower(5)">Pull 5</button>
-    <button (click)="pullPower(10)">Pull 10</button>
+  </div>
+
+  <div class="gacha-section combo-section">
+    <h2>🔥 Combo Pull (1 Character + 1 Weapon + 1 Power)</h2>
+    <button (click)="pullCombo()">Pull Combo</button>
   </div>
 </div>
 

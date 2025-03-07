@@ -7,6 +7,7 @@ interface Card {
   rarity: string;
   gacha_drop_rate: number;
   image: string;
+  type?: 'character' | 'weapon' | 'power';
 }
 
 @Component({
@@ -85,6 +86,21 @@ export class GachaComponent implements OnInit {
       randomNum -= card.gacha_drop_rate;
     }
     return null;
+  }
+
+  // 🛠️ Pull Combo (1 Character + 1 Weapon + 1 Power)
+  pullCombo() {
+    this.pulledCards = [];
+
+    const character = this.pullRandomCard(this.characters);
+    const weapon = this.pullRandomCard(this.weapons);
+    const power = this.pullRandomCard(this.powers);
+
+    if (character) this.pulledCards.push({ ...character, type: 'character' });
+    if (weapon) this.pulledCards.push({ ...weapon, type: 'weapon' });
+    if (power) this.pulledCards.push({ ...power, type: 'power' });
+
+    this.showPulledCards();
   }
 
   // 🎇 Show Pulled Cards in Rows
