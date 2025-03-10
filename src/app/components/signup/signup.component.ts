@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-signup',
@@ -10,12 +11,18 @@ export class SignupComponent {
   username: string = '';
   email: string = '';
   password: string = '';
+  errorMessage: string = '';
 
-  constructor(private router: Router) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
-  onSignup() {
-    // TODO: Implement actual signup logic (Firebase/Auth API)
-    alert('Signup successful! Redirecting to login page...');
-    this.router.navigate(['/login']);
+  async onSignup() {
+    try {
+      await this.authService.signup(this.email, this.password, this.username);
+      alert('Signup successful! Redirecting...');
+      await this.authService.signup(this.email, this.password, this.username);
+      this.router.navigate(['/']);
+    } catch (error: any) {
+      this.errorMessage = error.message;
+    }
   }
 }

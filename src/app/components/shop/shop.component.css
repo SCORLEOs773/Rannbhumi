@@ -1,0 +1,157 @@
+.animated-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: linear-gradient(90deg, #120136, #2a004f, #120136);
+  animation: bgMove 10s infinite linear alternate;
+}
+
+@keyframes bgMove {
+  from {
+    background-position: left;
+  }
+  to {
+    background-position: right;
+  }
+}
+
+.shop-container {
+  max-width: 800px;
+  margin: 5rem auto 2rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: white;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: gold;
+  }
+}
+
+.shop-section {
+  margin-bottom: 2rem;
+
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #ffcc00;
+  }
+
+  .offer-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    border: 2px solid gold;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    p {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+
+    button {
+      background: gold;
+      color: black;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s ease-in-out;
+
+      &:hover {
+        background: darkgoldenrod;
+      }
+    }
+  }
+}
+
+/* Modal Styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+
+  .modal-content {
+    background: #1e1e1e;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid gold;
+    color: white;
+
+    h3 {
+      color: gold;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      margin: 0.5rem;
+      padding: 0.7rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s ease-in-out;
+
+      &:first-child {
+        background: gold;
+        color: black;
+
+        &:hover {
+          background: darkgoldenrod;
+        }
+      }
+
+      &:last-child {
+        background: red;
+        color: white;
+
+        &:hover {
+          background: darkred;
+        }
+      }
+    }
+  }
+}
+
+.currency-section {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+
+  h4 {
+    font-size: 1.4rem;
+    color: gold;
+    margin-bottom: 1rem;
+  }
+}

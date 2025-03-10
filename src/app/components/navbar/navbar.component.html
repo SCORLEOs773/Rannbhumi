@@ -6,7 +6,29 @@
     <li><a routerLink="/how-to-play">How To Play</a></li>
     <li><a routerLink="/cards">Cards</a></li>
     <li><a routerLink="/gacha">Gacha</a></li>
+    <li><a routerLink="/shop">Shop</a></li>
   </ul>
 
-  <button class="signup-btn" routerLink="/signup">Sign Up</button>
+  <div class="player-stats" *ngIf="user">
+    <div class="stat">
+      <img
+        src="../../../assets/Icons/mudra.png"
+        alt="Mudra"
+        class="stat-icon"
+      />
+      <span>{{ mudra | number }}</span>
+    </div>
+    <div class="stat">
+      <img src="../../../assets/Icons/mani.png" alt="Mani" class="stat-icon" />
+      <span>{{ mani | number }}</span>
+    </div>
+  </div>
+
+  <div *ngIf="!user">
+    <button class="auth-btn" routerLink="/signup">Sign Up / Login</button>
+  </div>
+
+  <div *ngIf="user" class="profile-container">
+    <div class="profile-icon" (click)="logout()">{{ userInitial }}</div>
+  </div>
 </nav>

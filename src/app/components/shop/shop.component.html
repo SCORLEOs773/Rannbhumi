@@ -1,0 +1,60 @@
+<div class="animated-bg"></div>
+<div class="shop-container">
+  <h2>Shop</h2>
+
+  <!-- Buy Currency Section -->
+  <div class="shop-section">
+    <h3>Buy Currency</h3>
+
+    <!-- Buy Mudra -->
+    <div class="sub-section">
+      <h4>Buy Mudra</h4>
+      <div class="offer-card" *ngFor="let offer of mudraOffers">
+        <p>{{ offer.amount }} Mudras</p>
+        <p>Price: {{ offer.price }} INR</p>
+        <button (click)="openPurchaseModal(offer, 'mudra')">Buy</button>
+      </div>
+    </div>
+
+    <!-- Buy Mani -->
+    <div class="sub-section">
+      <h4>Buy Mani</h4>
+      <div class="offer-card" *ngFor="let offer of maniOffers">
+        <p>{{ offer.amount }} Manis</p>
+        <p>Price: {{ offer.price }} INR</p>
+        <button (click)="openPurchaseModal(offer, 'mani')">Buy</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Buy Game Resources & Offers Section -->
+  <div class="shop-section">
+    <h3>Buy Game Resources & Offers</h3>
+    <div class="offer-card" *ngFor="let offer of cardOffers">
+      <p>{{ offer.name }}</p>
+      <p>Price: {{ offer.priceMudra }} Mudras, {{ offer.priceMani }} Manis</p>
+      <button (click)="buyCardOffer(offer)">Buy</button>
+    </div>
+  </div>
+
+  <!-- Purchase Modal -->
+  <div *ngIf="showModal" class="modal">
+    <div class="modal-content">
+      <h3>Confirm Purchase</h3>
+      <p>
+        Are you sure you want to buy
+        {{ selectedOffer?.amount || selectedOffer?.name }}
+        {{ selectedType }} for
+        {{
+          selectedOffer?.price ||
+            selectedOffer?.priceMudra +
+              " Mudras & " +
+              selectedOffer?.priceMani +
+              " Manis"
+        }}?
+      </p>
+      <button (click)="confirmPurchase()">Yes</button>
+      <button (click)="closeModal()">No</button>
+    </div>
+  </div>
+</div>

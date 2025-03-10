@@ -18,6 +18,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { CardsComponent } from './components/cards/cards.component';
 import { WeaponCardComponent } from './components/weapon-card/weapon-card.component';
 import { PowerCardComponent } from './components/power-card/power-card.component';
+import { LoginComponent } from './components/login/login.component';
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { provideAuth, getAuth } from '@angular/fire/auth';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
+import { ShopComponent } from './components/shop/shop.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +37,8 @@ import { PowerCardComponent } from './components/power-card/power-card.component
     CardsComponent,
     WeaponCardComponent,
     PowerCardComponent,
+    LoginComponent,
+    ShopComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,6 +48,9 @@ import { PowerCardComponent } from './components/power-card/power-card.component
     MatExpansionModule,
     MatCardModule,
     MatButtonModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
   ],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
