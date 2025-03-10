@@ -7,6 +7,8 @@ import { CardsComponent } from './components/cards/cards.component';
 import { GachaComponent } from './components/gacha/gacha.component';
 import { LoginComponent } from './components/login/login.component';
 import { ShopComponent } from './components/shop/shop.component';
+import { BattlefieldComponent } from './components/battlefield/battlefield.component';
+import { SelectionScreenComponent } from './components/selection-screen/selection-screen.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -16,6 +18,8 @@ const routes: Routes = [
   { path: 'cards', component: CardsComponent },
   { path: 'gacha', component: GachaComponent },
   { path: 'shop', component: ShopComponent },
+  { path: 'battlefield', component: BattlefieldComponent },
+  { path: 'selection-screen', component: SelectionScreenComponent },
   { path: '**', redirectTo: '/' },
 ];
 

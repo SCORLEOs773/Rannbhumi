@@ -1,0 +1,145 @@
+.animated-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: linear-gradient(90deg, #120136, #2a004f, #120136);
+  animation: bgMove 10s infinite linear alternate;
+}
+
+@keyframes bgMove {
+  from {
+    background-position: left;
+  }
+  to {
+    background-position: right;
+  }
+}
+
+.battlefield-container {
+  text-align: center;
+  color: white;
+  padding: 2rem;
+  margin-top: 2rem;
+  position: relative;
+}
+
+/* Back Button */
+.back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Timer */
+.game-timer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+}
+
+/* Play Area */
+.play-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+/* Opponent’s Cards */
+.opponent-cards {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Battlefield Board */
+.game-board {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+/* Player Cards */
+.player-cards {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Card Styles */
+.card {
+  width: 80px;
+  height: 120px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+/* Back of Card */
+.card.back {
+  background: gray;
+}
+
+/* Front of Card */
+.card.front {
+  background: gold;
+}
+
+/* Draw Deck */
+.draw-deck {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+
+  button {
+    background: green;
+    color: white;
+    font-size: 1.2rem;
+    padding: 0.8rem;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}
+
+/* Toast Notification */
+.toast-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 255, 0, 0.9);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.5);
+  animation: fadeOut 3s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

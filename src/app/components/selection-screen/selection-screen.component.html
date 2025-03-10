@@ -1,0 +1,59 @@
+<div class="animated-bg"></div>
+<div class="game-mode-container">
+  <h1>Select Game Mode</h1>
+
+  <!-- Play vs Computer -->
+  <button (click)="playVsComputer()">Play vs Computer</button>
+
+  <!-- PvP Random Match -->
+  <button (click)="openPvPModal()">PvP Random Match</button>
+
+  <!-- Private Room Mode -->
+  <div class="private-room">
+    <h2>Private Room</h2>
+    <button (click)="createRoom()">Create Room</button>
+    <button (click)="openJoinRoomModal()">Join Room</button>
+  </div>
+</div>
+
+<!-- Room Code Box (Appears when a room is created) -->
+<div class="room-code-box" *ngIf="roomCode">
+  <h3>Room Created!</h3>
+  <p>
+    Room Code: <strong>{{ roomCode }}</strong>
+  </p>
+  <button (click)="copyRoomCode()">Copy Code</button>
+</div>
+
+<!-- Join Room Modal -->
+<div class="modal-backdrop" *ngIf="isJoinRoomModalOpen">
+  <div class="modal-content">
+    <h2>Join Room</h2>
+    <input
+      type="text"
+      [(ngModel)]="enteredRoomCode"
+      placeholder="Enter 4-digit code"
+    />
+    <button (click)="joinExistingRoom()">Join</button>
+    <button class="close-btn" (click)="closeJoinRoomModal()">X</button>
+  </div>
+</div>
+
+<!-- PvP Coming Soon Modal -->
+<div class="modal-backdrop" *ngIf="isPvPModalOpen">
+  <div class="modal-content">
+    <h2>Finding an opponent...</h2>
+    <p>Feature coming soon!</p>
+    <button class="close-btn" (click)="closePvPModal()">Close</button>
+  </div>
+</div>
+
+<!-- Toast Notification -->
+<!-- Toast Notifications -->
+<div
+  *ngIf="showToast"
+  class="toast-notification"
+  [ngStyle]="{ background: toastColor }"
+>
+  {{ toastMessage }}
+</div>

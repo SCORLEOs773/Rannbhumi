@@ -24,6 +24,8 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { ShopComponent } from './components/shop/shop.component';
+import { BattlefieldComponent } from './components/battlefield/battlefield.component';
+import { SelectionScreenComponent } from './components/selection-screen/selection-screen.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import { ShopComponent } from './components/shop/shop.component';
     PowerCardComponent,
     LoginComponent,
     ShopComponent,
+    BattlefieldComponent,
+    SelectionScreenComponent,
   ],
   imports: [
     BrowserModule,
